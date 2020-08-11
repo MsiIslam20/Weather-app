@@ -39,8 +39,14 @@ const api = {
     base: "https://api.openweathermap.org/data/2.5/"
 }
 
-// function getResults() {
-    fetch(`${api.base}weather?q=sylhet&units=metric&APPID=${api.key}`)
+document.getElementById("submit-id").addEventListener("click", function(){
+    const findValue = document.getElementById("get-value").value;
+    getResults(findValue);
+    
+})
+
+function getResults(valueCity) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${valueCity}&units=metric&APPID=6f0afe92ff5231fed4df9aeac089587d`)
         .then(weather => {
             return weather.json();
         })
@@ -49,6 +55,6 @@ const api = {
             const {temp , summary} = data.main;
             temperatureDegree.textContent = Math.round(temp);
         });
-// }
+}
 });
 // getResults()
