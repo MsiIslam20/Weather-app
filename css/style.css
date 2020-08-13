@@ -64,4 +64,19 @@ body {
 .degree-sec h2 {
   font-size: 40px;
 }
+
+#get-value {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 18px;
+}
+
+#submit-id {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 0px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
