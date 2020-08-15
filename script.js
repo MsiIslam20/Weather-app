@@ -33,28 +33,28 @@
 //     };
 // });
 window.addEventListener("load", () => {
-let temperatureDegree = document.querySelector(".temperature-degree");
-const api = {
-    key: "6f0afe92ff5231fed4df9aeac089587d",
-    base: "https://api.openweathermap.org/data/2.5/"
-}
+    let temperatureDegree = document.querySelector(".temperature-degree");
+    const api = {
+        key: "6f0afe92ff5231fed4df9aeac089587d",
+        base: "https://api.openweathermap.org/data/2.5/"
+    }
 
-document.getElementById("submit-id").addEventListener("click", function(){
-    const findValue = document.getElementById("get-value").value;
-    getResults(findValue);
-    
-})
+    document.getElementById("submit-id").addEventListener("click", function(){
+        const findValue = document.getElementById("get-value").value;
+        getResults(findValue);
+        
+    })
 
-function getResults(valueCity) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${valueCity}&units=metric&APPID=6f0afe92ff5231fed4df9aeac089587d`)
-        .then(weather => {
-            return weather.json();
-        })
-        .then(data => {
-            console.log(data);
-            const {temp , summary} = data.main;
-            temperatureDegree.textContent = Math.round(temp);
-        });
-}
+    function getResults(valueCity) {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${valueCity}&units=metric&APPID=6f0afe92ff5231fed4df9aeac089587d`)
+            .then(weather => {
+                return weather.json();
+            })
+            .then(data => {
+                console.log(data);
+                const {temp , summary} = data.main;
+                temperatureDegree.textContent = Math.round(temp);
+            });
+    }
 });
 // getResults()
