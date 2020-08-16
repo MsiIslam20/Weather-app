@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
         
     })
 
-    //API call
+    //API call from open weather api
     function getResults(valueCity) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${valueCity}&units=metric&APPID=6f0afe92ff5231fed4df9aeac089587d`)
             .then(weather => {
