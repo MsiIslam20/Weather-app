@@ -1,0 +1,12 @@
+body {
+    background: url(images/bg-image.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.weather-status.text-white.text-center {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 100px 0px;
+    background: #000000c2;
+    border-radius: 30px;
+}
